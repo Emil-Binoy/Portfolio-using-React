@@ -53,6 +53,7 @@ export const About = () => {
               </ul>
             </div>
           </div>
+          <a href="https://emil-binoy.github.io/Certificate-Gallery/"><button type="button" class="w-full text-white bg-blue-700 hover:bg-blue-800 hover:-translate-y-1 transition-all font-medium rounded-lg text-sm px-5 py-2.5 my-5 dark:bg-blue-600 dark:hover:bg-blue-700 ">See My Certificates</button></a>
         </div>
     </section>
   );
