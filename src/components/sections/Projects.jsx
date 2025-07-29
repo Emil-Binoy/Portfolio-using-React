@@ -1,3 +1,6 @@
+import { FaArrowRight } from "react-icons/fa";
+
+
 export const Projects = () => {
   return (
     <section id="projects" className="min-h-screen flex items-center justify-center py-20">
@@ -77,6 +80,17 @@ export const Projects = () => {
             </div>
           </div>
         </div>
+        <div className="flex justify-center mt-10">
+          <a
+            href="https://github.com/Emil-Binoy?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-blue-500 hover:text-blue-400 hover:translate-x-2 transition-all text-lg font-medium"
+          >
+            More Projects <span><FaArrowRight /></span>
+          </a>
+        </div>
+
       </div>
     </section>
   );
