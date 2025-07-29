@@ -1,4 +1,12 @@
+import { useState } from "react";
+
 export const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () =>{
+    setIsOpen(!isOpen);
+  }
+
   return (
     <nav className="z-50 fixed w-full top-0 left-0 bg-gray-900 border-gray-800">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -7,11 +15,9 @@ export const Navbar = () => {
           <span className="text-white"> Binoy</span>
         </a>
         <button
-          data-collapse-toggle="navbar-default"
+          onClick={toggleMenu}
           type="button"
           className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-700"
-          aria-controls="navbar-default"
-          aria-expanded="false"
         >
           <span className="sr-only">Open main menu</span>
           <svg
@@ -30,7 +36,7 @@ export const Navbar = () => {
             />
           </svg>
         </button>
-        <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+        <div className={`${isOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`}>
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-800 rounded-lg bg-gray-900 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-gray-900">
             <li>
               <a href="#home" className="block py-2 px-3 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:p-0 md:hover:text-blue-500">
