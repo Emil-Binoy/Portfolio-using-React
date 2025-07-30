@@ -19,10 +19,12 @@ function App() {
   return (
     <>
       <Navbar />
+      <main className="pt-16">
       <Home/>
       <About/>
       <Projects/>
       <Contact/>
+      </main>
     </>
   );
 }
