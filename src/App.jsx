@@ -10,10 +10,12 @@ import 'aos/dist/aos.css';
 
 function App() {
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
+    setTimeout(() => {
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    }, 500);
   }, []);
   
   return (
