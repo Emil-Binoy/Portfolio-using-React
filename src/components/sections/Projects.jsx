@@ -5,9 +5,9 @@ export const Projects = () => {
   return (
     <section id="projects" className="min-h-screen flex items-center justify-center py-20">
       <div className="max-w-5xl mx-auto px-4">
-        <h2 className="text-center mb-5 text-3xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 text-transparent bg-clip-text">Featured Projects</h2>
+        <h2 data-aos="fade-up" data-aos-delay="200" className="text-center mb-5 text-3xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 text-transparent bg-clip-text">Featured Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover;border-blue-500/30 hover:shadow-blue-600 transition">
+          <div data-aos="fade-right" data-aos-delay="200" className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover;border-blue-500/30 hover:shadow-blue-600 transition">
             <h3 className="text-xl font-bold mb-2">Simple Calculator</h3>
             <p className="text-gray-400 mb-4">
                Web-based calculator designed for quick and efficient arithmetic calculations.
@@ -25,7 +25,7 @@ export const Projects = () => {
               <a href="https://emil-binoy.github.io/calculator/" className="text-blue-400 hover:text-blue-300 transition-colors">View Project</a>
             </div>
           </div>
-          <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover;border-blue-500/30 hover:shadow-blue-600 transition">
+          <div data-aos="fade-left" data-aos-delay="200" className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover;border-blue-500/30 hover:shadow-blue-600 transition">
             <h3 className="text-xl font-bold mb-2">Digital Dice</h3>
             <p className="text-gray-400 mb-4">
                A simple number dice that worked on js random function, that used for playing games
@@ -43,7 +43,7 @@ export const Projects = () => {
               <a href="https://emil-binoy.github.io/digital-dies/" className="text-blue-400 hover:text-blue-300 transition-colors">View Project</a>
             </div>
           </div>
-          <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover;border-blue-500/30 hover:shadow-blue-600 transition">
+          <div data-aos="fade-right" data-aos-delay="200" className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover;border-blue-500/30 hover:shadow-blue-600 transition">
             <h3 className="text-xl font-bold mb-2">Silly Story Generator</h3>
             <p className="text-gray-400 mb-4">
                A silly story generator that is a task given by mulearn platform, it generate random stories.
@@ -61,7 +61,7 @@ export const Projects = () => {
               <a href="https://emil-binoy.github.io/story-generator/" className="text-blue-400 hover:text-blue-300 transition-colors">View Project</a>
             </div>
           </div>
-          <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover;border-blue-500/30 hover:shadow-blue-600 transition">
+          <div data-aos="fade-left" data-aos-delay="200" className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover;border-blue-500/30 hover:shadow-blue-600 transition">
             <h3 className="text-xl font-bold mb-2">Certificate Gallery</h3>
             <p className="text-gray-400 mb-4">
                 A gallery showcasing all my technical achievements and workshop participation in one place.
@@ -80,7 +80,7 @@ export const Projects = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center mt-10">
+        <div data-aos="fade-right" data-aos-delay="200" className="flex justify-center mt-10">
           <a
             href="https://github.com/Emil-Binoy?tab=repositories"
             target="_blank"

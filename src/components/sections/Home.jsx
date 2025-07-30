@@ -1,7 +1,7 @@
 export const Home = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative">
-        <div className="text-center z-10 px-4">
+    <section  id="home" className="min-h-screen flex items-center justify-center relative">
+        <div data-aos="fade-up" data-aos-delay="200" className="text-center z-10 px-4">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 p-3 bg-gradient-to-r from-blue-500 to-cyan-400 text-transparent bg-clip-text">Hi, Iam Emil Binoy</h1>
             <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto">Whether it's creating responsive web designs, developing APIs, or optimizing performance, I am committed to delivering work that exceeds expectations and drives results. Let’s collaborate to turn your ideas into impactful web solutions.
             </p>

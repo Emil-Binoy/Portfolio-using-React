@@ -20,7 +20,7 @@ export const Contact = () => {
   
   return (
     <section id="contact" className="min-h-screen flex items-center justify-center py-20">
-        <div className="px-4 w-150">
+        <div data-aos="fade-up" data-aos-delay="200" className="px-4 w-150">
             <h2 className="text-center mb-5 text-3xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 text-transparent bg-clip-text">Get In Touch</h2>
             <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="relative">
