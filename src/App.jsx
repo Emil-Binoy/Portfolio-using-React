@@ -9,20 +9,20 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 function App() {
-  const [isNavbarReady, setNavbarReady] = useState(false);
+  
 
   useEffect(() => {
-    if (isNavbarReady) {
+    
       AOS.init({
         duration: 1000,
         once: true,
       });
-    }
-  }, [isNavbarReady]);
+    
+  }, );
   
   return (
     <>
-      <Navbar onReady={() => setNavbarReady(true)} />
+      <Navbar  />
 
       <Home/>
       <About/>
