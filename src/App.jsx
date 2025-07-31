@@ -21,7 +21,7 @@ function App() {
   }, );
   
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Navbar  />
 
       <Home/>
@@ -29,7 +29,7 @@ function App() {
       <Projects/>
       <Contact/>
       
-    </>
+    </div>
   );
 }
 
