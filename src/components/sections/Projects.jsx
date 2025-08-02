@@ -8,12 +8,12 @@ export const Projects = () => {
         <h2 data-aos="fade-up" data-aos-delay="200" className="text-center mb-5 text-3xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 text-transparent bg-clip-text">Featured Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div data-aos="fade-right" data-aos-delay="200" className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover;border-blue-500/30 hover:shadow-blue-600 transition">
-            <h3 className="text-xl font-bold mb-2">Simple Calculator</h3>
+            <h3 className="text-xl font-bold mb-2">Todo List</h3>
             <p className="text-gray-400 mb-4">
-               Web-based calculator designed for quick and efficient arithmetic calculations.
+               A minimal and responsive to-do list app that lets you add, mark, and delete tasks with ease.
             </p>
             <div className="flex flex-wrap gap-2 mb">
-              {['HTML','CSS','tailwind CSS','Java Script'].map((tech,key) => (
+              {['React JS', 'CSS'].map((tech,key) => (
                 <span 
                 key={key} 
                 className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-blue-600 transition-all">
@@ -22,16 +22,16 @@ export const Projects = () => {
               ))}
             </div>
             <div className="flex justify-between items-center">
-              <a href="https://emil-binoy.github.io/calculator/" className="text-blue-400 hover:text-blue-300 transition-colors">View Project</a>
+              <a href="https://emil-binoy.github.io/Todo-List/" className="text-blue-400 hover:text-blue-300 transition-colors">View Project</a>
             </div>
           </div>
           <div data-aos="fade-left" data-aos-delay="200" className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover;border-blue-500/30 hover:shadow-blue-600 transition">
-            <h3 className="text-xl font-bold mb-2">Digital Dice</h3>
+            <h3 className="text-xl font-bold mb-2">Bouncing Ball Game</h3>
             <p className="text-gray-400 mb-4">
-               A simple number dice that worked on js random function, that used for playing games
+               A simple canvas-based game where a ball moves around, engulfing other bouncing balls on collision.
             </p>
             <div className="flex flex-wrap gap-2 mb">
-              {['HTML','CSS','tailwind CSS','Java Script'].map((tech,key) => (
+              {['HTML','CSS','Java Script'].map((tech,key) => (
                 <span 
                 key={key} 
                 className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-blue-600 transition-all">
@@ -40,7 +40,7 @@ export const Projects = () => {
               ))}
             </div>
             <div className="flex justify-between items-center">
-              <a href="https://emil-binoy.github.io/digital-dies/" className="text-blue-400 hover:text-blue-300 transition-colors">View Project</a>
+              <a href="https://emil-binoy.github.io/Bouncing-Balls-game/" className="text-blue-400 hover:text-blue-300 transition-colors">View Project</a>
             </div>
           </div>
           <div data-aos="fade-right" data-aos-delay="200" className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover;border-blue-500/30 hover:shadow-blue-600 transition">
