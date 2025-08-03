@@ -52,6 +52,7 @@ export const Navbar = () => {
               <li>
                 <a
                   href="#home"
+                  onClick={()=> setIsOpen(false)}
                   className="block py-2 px-3 hover:bg-gray-700 md:hover:bg-transparent md:p-0 hover:text-blue-500 hover:border-b-3"
                 >
                   Home
@@ -60,6 +61,7 @@ export const Navbar = () => {
               <li>
                 <a
                   href="#about"
+                  onClick={()=> setIsOpen(false)}
                   className="block py-2 px-3  hover:bg-gray-700 md:hover:bg-transparent md:p-0 hover:text-blue-500 hover:border-b-3"
                 >
                   About
@@ -68,6 +70,7 @@ export const Navbar = () => {
               <li>
                 <a
                   href="#projects"
+                  onClick={()=> setIsOpen(false)}
                   className="block py-2 px-3  hover:bg-gray-700 md:hover:bg-transparent md:p-0 hover:text-blue-500 hover:border-b-3"
                 >
                   Projects
@@ -76,6 +79,7 @@ export const Navbar = () => {
               <li>
                 <a
                   href="#contact"
+                  onClick={()=> setIsOpen(false)}
                   className="block py-2 px-3  hover:bg-gray-700 md:hover:bg-transparent md:p-0 hover:text-blue-500 hover:border-b-3"
                 >
                   Contact
