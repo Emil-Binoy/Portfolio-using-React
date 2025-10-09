@@ -12,7 +12,7 @@ export const Home = () => {
                 <a href="#contact" className="shadow-sm shadow-blue-500/50  bg-blue-500/5 text-blue-500 px-5 py-2 rounded-lg transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-blue-500/10">Contact Me</a>
             </div>
         </div>
-        <img src={profile} data-aos="fade-left" data-aos-delay="200" alt="profile" className='m-5 rounded-full h-60 w-60 border-3 border-solid border-blue-400'/>
+        <img src={profile} data-aos="fade-left" data-aos-delay={window.innerWidth < 640 ? 600 :  200 } alt="profile" className='m-5 rounded-full h-60 w-60 border-3 border-solid border-blue-400'/>
     </section>
   )
 }
