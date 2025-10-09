@@ -9,7 +9,7 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="z-50 fixed w-full top-0 left-0 bg-gray-900 border-gray-800">
+    <nav className="z-50 fixed w-full top-0 left-0 bg-gray-900/50 backdrop-blur-md border-gray-800">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a
           href="#home"
@@ -46,7 +46,7 @@ export const Navbar = () => {
             <Scrollspy
               items={["home", "about", "projects", "contact"]}
               currentClassName="text-blue-500 border-b-3 border-blue-500 "
-              className="font-medium text-white flex flex-col p-4 md:p-0 mt-4 border border-gray-800 rounded-lg bg-gray-900 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-gray-900"
+              className="font-medium text-white flex flex-col p-4 md:p-0 mt-4 border border-gray-800  rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0"
               offset={-100}
             >
               <li>
