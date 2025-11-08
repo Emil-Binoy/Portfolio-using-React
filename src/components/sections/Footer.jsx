@@ -1,4 +1,5 @@
 import { FaLinkedin, FaInstagram, FaGithub, FaYoutube } from "react-icons/fa"
+import { SiLeetcode } from "react-icons/si";
 
 export const Footer = () => (
   <footer className="w-full bg-gray-900 rounded-lg shadow-lg  p-6">
@@ -41,6 +42,15 @@ export const Footer = () => (
             aria-label="YouTube"
           >
             <FaYoutube className="text-2xl text-gray-400 duration-200 group-hover:text-white" />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://leetcode.com/u/Emil_Binoy/"
+            className="group flex items-center justify-center w-12 h-12 rounded-full border border-blue-500 duration-200 hover:border-transparent hover:bg-white"
+            aria-label="LeetCode"
+          >
+            <SiLeetcode className="text-2xl text-gray-400 duration-200 group-hover:text-orange-400" />
           </a>
         </li>
       </ul>
