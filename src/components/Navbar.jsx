@@ -13,7 +13,7 @@ export const Navbar = () => {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a
           href="#home"
-          className="self-center text-2xl font-semibold whitespace-nowrap text-blue-500"
+          className="cinzel-decorative-bold self-center text-2xl font-semibold whitespace-nowrap text-blue-500"
         >
           Emil <span className="text-white">Binoy</span>
         </a>
