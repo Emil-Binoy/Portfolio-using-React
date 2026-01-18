@@ -31,7 +31,7 @@ export const Projects = () => {
                A lightweight React app that takes user inputs and randomly chooses one item from the list.
             </p>
             <div className="flex flex-wrap gap-2 mb">
-              {['Tailwind CSS','React JS','Vite'].map((tech,key) => (
+              {['Tailwind CSS','React JS'].map((tech,key) => (
                 <span 
                 key={key} 
                 className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-blue-600 transition-all">
@@ -67,7 +67,7 @@ export const Projects = () => {
                 A gallery showcasing all my technical achievements and workshop participation in one place.
             </p>
             <div className="flex flex-wrap gap-2 mb">
-              {['HTML','CSS','Java Script'].map((tech,key) => (
+              {['ReactJs','TailwindCSS'].map((tech,key) => (
                 <span 
                 key={key} 
                 className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-blue-600 transition-all">
@@ -76,7 +76,7 @@ export const Projects = () => {
               ))}
             </div>
             <div className="flex justify-between items-center">
-              <a href="https://emil-binoy.github.io/Certificate-Gallery/" className=" text-blue-400 hover:text-blue-300 transition-colors">View Project</a>
+              <a href="https://certificate-gallery-using-react.vercel.app/" className=" text-blue-400 hover:text-blue-300 transition-colors">View Project</a>
             </div>
           </div>
         </div>
