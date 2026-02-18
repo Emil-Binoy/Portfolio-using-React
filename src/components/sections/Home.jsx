@@ -1,4 +1,4 @@
-import { useState } from 'react'; // Added useState
+import { useState } from 'react'; 
 import profile from '../../assets/images/profile.jpg';
 import Tilt from "react-parallax-tilt";
 import Typewriter from 'typewriter-effect';
@@ -70,7 +70,8 @@ export const Home = () => {
             </div>
         </div>
 
-        <div className="animate-float relative z-10">
+        {/* Added shrink-0 to prevent squeezing */}
+        <div className="animate-float relative z-10 shrink-0">
           <Tilt
             tiltMaxAngleX={15}
             tiltMaxAngleY={15}
@@ -80,12 +81,13 @@ export const Home = () => {
             transitionSpeed={1000}
             className="rounded-full drop-shadow-[0_0_15px_rgba(59,130,246,0.5)] hover:drop-shadow-[0_0_30px_rgba(59,130,246,0.8)] transition-all duration-300"
           >
+            {/* Added object-cover to keep image circular */}
             <img 
               src={profile} 
               data-aos="fade-left" 
               data-aos-delay={window.innerWidth < 640 ? 600 : 200} 
               alt="profile" 
-              className='m-5 rounded-full h-60 w-60 border-4 border-solid border-blue-500/50 shadow-2xl'
+              className='m-5 rounded-full h-60 w-60 object-cover border-4 border-solid border-blue-500/50 shadow-2xl'
             />
           </Tilt>
         </div>
