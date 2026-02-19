@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Scrollspy from "react-scrollspy";
+import my_cv from "../assets/my_cv.pdf"
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,9 +27,9 @@ export const Navbar = () => {
         scrolled ? "top-2 px-6" : "top-0 px-0"
       }`}
     >
-      <div className="mx-auto transition-all duration-300 max-w-5xl rounded-2xl bg-[#030014]/70 backdrop-blur-xl border border-white/10 shadow-[0_0_20px_rgba(0,0,0,0.3)]">
+      <div className="mx-auto transition-all duration-300 max-w-5xl rounded-2xl bg-[#030014]/40 backdrop-blur-xl border border-white/10 shadow-[0_0_20px_rgba(0,0,0,0.3)]">
         <div className="flex flex-wrap items-center justify-between mx-auto p-4 px-6">
-        
+          
           <a
             href="#home"
             className="cinzel-decorative-bold self-center text-2xl font-semibold whitespace-nowrap text-blue-500"
@@ -36,7 +37,6 @@ export const Navbar = () => {
             Emil <span className="text-white">Binoy</span>
           </a>
 
-         
           <button
             onClick={() => setIsOpen(!isOpen)}
             type="button"
@@ -52,7 +52,8 @@ export const Navbar = () => {
             </svg>
           </button>
 
-          <div className={`${isOpen ? "block" : "hidden"} w-full md:block md:w-auto transition-all duration-300`}>
+          <div className={`${isOpen ? "block" : "hidden"} w-full md:flex md:w-auto md:items-center transition-all duration-300`}>
+            
             <Scrollspy
               items={navLinks.map((link) => link.href.substring(1))}
               currentClassName="text-blue-500 border-b-2 border-blue-500 md:border-b-3"
@@ -71,6 +72,19 @@ export const Navbar = () => {
                 </li>
               ))}
             </Scrollspy>
+
+            {/* Download CV Button Container */}
+            <div className="px-4 pb-4 md:p-0 md:pl-8 mt-2 md:mt-0">
+              <a
+                href={my_cv}
+                download="Emil_Binoy_CV.pdf"
+                onClick={() => setIsOpen(false)}
+                className="flex items-center justify-center w-full md:w-auto px-6 py-2 text-sm font-semibold text-blue-400 transition-all duration-300 border border-blue-500 rounded-full hover:bg-blue-600 hover:text-white shadow-[0_0_10px_rgba(59,130,246,0.1)] hover:shadow-[0_0_15px_rgba(59,130,246,0.3)]"
+              >
+                Download CV
+              </a>
+            </div>
+
           </div>
         </div>
       </div>
