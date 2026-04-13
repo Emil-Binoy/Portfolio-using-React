@@ -6,7 +6,6 @@ export const Footer = () => {
 
   return (
     <footer className="w-full bg-[#030014] border-t border-white/10 pt-10 pb-6 px-4 md:pt-16 md:pb-8 md:px-6 overflow-hidden relative">
-      {/* Top Gradient Line - Wider on mobile for better visibility */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 md:w-1/2 h-[1px] bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-50 animate-pulse"></div>
 
       <div className="max-w-5xl mx-auto flex flex-col items-center justify-center">
@@ -24,7 +23,6 @@ export const Footer = () => {
             Connect With Me
           </h3>
 
-          {/* Icons: Smaller size and gap on mobile to prevent wrapping, original size on desktop */}
           <ul className="flex flex-wrap justify-center gap-3 md:gap-6">
             <li className="hover:-translate-y-3 transition-transform duration-300">
               <a
@@ -38,7 +36,7 @@ export const Footer = () => {
 
             <li className="hover:-translate-y-3 transition-transform duration-300 delay-75">
               <a
-                href="https://www.instagram.com/its_emilefx/"
+                href="https://www.instagram.com/emil_binoy_?igsh=aGlra3Vhb3N4aDlh"
                 className="group flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-white/5 border border-white/10 duration-300 hover:border-pink-500/50 hover:bg-pink-600/10 hover:shadow-[0_0_20px_rgba(219,39,119,0.2)]"
                 aria-label="Instagram"
               >
