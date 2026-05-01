@@ -23,9 +23,8 @@ export const Projects = () => {
 
   return (
     <section id="projects" className="min-h-screen py-24 bg-[#030014] relative overflow-hidden">
-      {/* Background Orbs */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] -z-0"></div>
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px] -z-0"></div>
+      <div className="absolute top-20 right-1/9 w-80 h-80 bg-blue-600/10 rounded-full blur-[120px] -z-0"></div>
+      <div className="absolute bottom-20 left-1/9 w-80 h-80 bg-purple-600/10 rounded-full blur-[120px] -z-0"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
