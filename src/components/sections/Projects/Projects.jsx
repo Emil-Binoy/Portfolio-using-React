@@ -4,11 +4,9 @@ import { Autoplay, Pagination, EffectCoverflow } from 'swiper/modules';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-// Import local components and data
 import ProjectCard from './ProjectCard';
 import { projectData } from './Constants';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';

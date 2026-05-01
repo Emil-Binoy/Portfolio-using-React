@@ -8,6 +8,7 @@ import { Footer } from "./components/sections/Footer";
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Cursor from "./components/Cursor";
 
 
 function App() {
@@ -24,8 +25,8 @@ function App() {
   
   return (
     <div className="overflow-x-hidden poppins-regular">
+      <Cursor/>
       <Navbar  />
-
       <Home/>
       <About/>
       <Projects/>

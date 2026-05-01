@@ -5,7 +5,6 @@ import Typewriter from 'typewriter-effect';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-// Import Icons from React Icons
 import { 
   SiReact, 
   SiVite, 
@@ -15,7 +14,6 @@ import {
 } from "react-icons/si";
 import { FaGitAlt,FaGithub } from "react-icons/fa";
 
-// Configuration for orbits using the imported components
 const orbitConfigs = [
   { Icon: SiReact,        label: "React",      color: "#61DAFB", startAngle: 0,   duration: 8,  radius: 130, tilt: 0.3, rotation: 0 },
   { Icon: SiVite,         label: "Vite",       color: "#646CFF", startAngle: 60,  duration: 11, radius: 140, tilt: 0.4, rotation: 45 },
