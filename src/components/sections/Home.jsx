@@ -4,7 +4,6 @@ import Tilt from "react-parallax-tilt";
 import Typewriter from 'typewriter-effect';
 
 export const Home = () => {
-  // State to track when the paragraph is done typing
   const [showRoles, setShowRoles] = useState(false);
 
   return (
@@ -70,7 +69,6 @@ export const Home = () => {
             </div>
         </div>
 
-        {/* Added shrink-0 to prevent squeezing */}
         <div className="animate-float relative z-10 shrink-0">
           <Tilt
             tiltMaxAngleX={15}
@@ -81,7 +79,6 @@ export const Home = () => {
             transitionSpeed={1000}
             className="rounded-full drop-shadow-[0_0_15px_rgba(59,130,246,0.5)] hover:drop-shadow-[0_0_30px_rgba(59,130,246,0.8)] transition-all duration-300"
           >
-            {/* Added object-cover to keep image circular */}
             <img 
               src={profile} 
               data-aos="fade-left" 
