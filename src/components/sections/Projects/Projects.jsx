@@ -40,7 +40,6 @@ export const Projects = () => {
             grabCursor={true}
             centeredSlides={true}
             loop={true}
-            loopedSlides={3}
             breakpoints={{
               320: { slidesPerView: 1 },
               768: { slidesPerView: 2 },
@@ -61,7 +60,7 @@ export const Projects = () => {
         </div>
       </div>
 
-      <style jsx global>{`
+      <style>{`
         .swiper-pagination-bullet { background: #3b82f6 !important; }
         .swiper-pagination-bullet-active {
           background: #60a5fa !important;

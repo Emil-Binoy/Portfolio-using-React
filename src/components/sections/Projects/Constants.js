@@ -2,6 +2,7 @@ import certImg from '../../../assets/images/Certificate_gallery.png';
 import career_bridge from '../../../assets/images/career_bridge.png';
 import random_picker from '../../../assets/images/Random_picker.png';
 import data_looper from '../../../assets/images/data_looper.png';
+import notes_app from '../../../assets/images/Notes_app.png';
 
 export const projectData = [
   {
@@ -43,5 +44,13 @@ export const projectData = [
     link: "https://data-looper.vercel.app/",
     github: "https://github.com/Emil-Binoy/data-looper",
     image: data_looper
+  },
+  {
+    title: "Notes App",
+    description: "My first full-stack Notes app with secure auth and seamless interactions.",
+    tech: ["React", "Tailwind CSS", "Express.js", "PostgreSQL", "Node.js"],
+    link: "https://notes-app-one-gray.vercel.app/",
+    github: "https://github.com/Emil-Binoy/Notes-App",
+    image: notes_app
   },
 ];

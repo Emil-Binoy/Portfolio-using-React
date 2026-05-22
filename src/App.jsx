@@ -5,7 +5,7 @@ import { Projects } from "./components/sections/Projects/Projects";
 import { Contact } from "./components/sections/Contact";
 import { Footer } from "./components/sections/Footer";
 
-import { useEffect } from 'react';
+import {useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Cursor from "./components/Cursor";
@@ -13,7 +13,7 @@ import Cursor from "./components/Cursor";
 
 function App() {
   
-
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     
       AOS.init({
