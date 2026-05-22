@@ -9,6 +9,7 @@ import {useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Cursor from "./components/Cursor";
+import { Skills } from "./components/sections/Skills";
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
       <Navbar  />
       <Home/>
       <About/>
+      <Skills/>
       <Projects/>
       <Contact/>
       <Footer/>

@@ -1,8 +1,6 @@
 import { FaGraduationCap, FaAward, FaCode, FaLayerGroup, FaTrophy } from "react-icons/fa";
 
 export const About = () => {
-  const languages = ['HTML', 'CSS', 'JavaScript', 'C', 'C++', 'Python'];
-  const frameworks = ['React', 'Next.js', 'TailwindCSS', 'Bootstrap'];
 
   return (
     <section id="about" className="min-h-screen flex items-center justify-center py-24 bg-[#030014] relative overflow-hidden">
@@ -20,36 +18,6 @@ export const About = () => {
           <p className="text-gray-300 text-lg leading-relaxed mb-8">
             I’m <span className="text-blue-400 font-bold">Emil Binoy</span>, a dedicated Frontend Developer currently expanding my expertise into <span className="text-cyan-400 font-bold">Full-Stack Development</span>. I am passionate about crafting seamless user experiences and robust web architectures.
           </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="group">
-              <div className="flex items-center gap-3 mb-4">
-                <FaCode className="text-blue-500 text-xl" />
-                <h3 className="text-xl font-bold text-white">Languages</h3>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {languages.map((tech, key) => (
-                  <span key={key} className="bg-blue-500/5 text-blue-400 border border-blue-500/20 py-1.5 px-4 rounded-xl text-sm font-medium hover:bg-blue-500/20 hover:scale-105 transition-all cursor-default">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="group">
-              <div className="flex items-center gap-3 mb-4">
-                <FaLayerGroup className="text-cyan-500 text-xl" />
-                <h3 className="text-xl font-bold text-white">Frameworks</h3>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {frameworks.map((tech, key) => (
-                  <span key={key} className="bg-cyan-500/5 text-cyan-400 border border-cyan-500/20 py-1.5 px-4 rounded-xl text-sm font-medium hover:bg-cyan-500/20 hover:scale-105 transition-all cursor-default">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
 
        
