@@ -15,8 +15,8 @@ export const About = () => {
         </div>
 
         <div data-aos="fade-up" className="rounded-3xl p-8 md:p-10 border border-white/10 bg-white/[0.02] backdrop-blur-md mb-8 hover:border-blue-500/30 transition-all duration-500">
-          <p className="text-gray-300 text-lg leading-relaxed mb-8">
-            I’m <span className="text-blue-400 font-bold">Emil Binoy</span>, a dedicated Frontend Developer currently expanding my expertise into <span className="text-cyan-400 font-bold">Full-Stack Development</span>. I am passionate about crafting seamless user experiences and robust web architectures.
+          <p className="text-gray-300 text-lg leading-relaxed">
+            I’m <span className="text-blue-400 font-bold">Emil Binoy</span>, a passionate <span className="text-cyan-400 font-bold">Full-Stack Developer</span> focused on building seamless user experiences and robust web applications. From creating intuitive frontend interfaces to developing scalable backend functionality, I enjoy turning ideas into complete digital products.
           </p>
         </div>
 
