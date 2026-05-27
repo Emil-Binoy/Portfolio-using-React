@@ -1,8 +1,8 @@
 import certImg from '../../../assets/images/Certificate_gallery.png';
 import career_bridge from '../../../assets/images/career_bridge.png';
-import random_picker from '../../../assets/images/Random_picker.png';
 import data_looper from '../../../assets/images/data_looper.png';
 import notes_app from '../../../assets/images/Notes_app.png';
+import Xeltrivox from '../../../assets/images/Xeltrivox.png';
 
 export const projectData = [
   {
@@ -12,14 +12,6 @@ export const projectData = [
     link: "https://career-bridge-delta.vercel.app/",
     github: "https://github.com/Emil-Binoy/Career-Bridge", 
     image: career_bridge
-  },
-  {
-    title: "Random Picker",
-    description: "Decision-making made simple with randomizing algorithms and smooth UI.",
-    tech: ["React JS", "Tailwind"],
-    link: "https://random-picker-dusky.vercel.app/",
-    github: "https://github.com/Emil-Binoy/Random-Picker",
-    image: random_picker
   },
   {
     title: "E - magine",
@@ -52,5 +44,13 @@ export const projectData = [
     link: "https://notes-app-one-gray.vercel.app/",
     github: "https://github.com/Emil-Binoy/Notes-App",
     image: notes_app
+  },
+  {
+    title: "Xeltrivox",
+    description: "A modern real-time chat platform built for seamless communication.",
+    tech: ["React", "Tailwind CSS", "Node.js", "Express.js", "Socket.IO", "Prisma", "PostgreSQL"],
+    link: "https://xeltrivox.vercel.app/",
+    github: "https://github.com/Emil-Binoy/Xeltrivox",
+    image: Xeltrivox
   },
 ];
