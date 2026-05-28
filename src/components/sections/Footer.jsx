@@ -26,7 +26,7 @@ export const Footer = () => {
           <ul className="flex flex-wrap justify-center gap-3 md:gap-6">
             <li className="hover:-translate-y-3 transition-transform duration-300">
               <a
-                href="https://www.linkedin.com/in/emil-binoy-769261325/"
+                href="https://www.linkedin.com/in/emil-binoy"
                 className="group flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-white/5 border border-white/10 duration-300 hover:border-blue-500/50 hover:bg-blue-600/10 hover:shadow-[0_0_20px_rgba(37,99,235,0.2)]"
                 aria-label="LinkedIn"
               >
