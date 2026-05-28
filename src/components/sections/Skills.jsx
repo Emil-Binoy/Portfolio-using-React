@@ -8,9 +8,10 @@ import {
   SiJavascript,
   SiPython,
   SiC,
-  SiCplusplus,
+  SiSocketdotio,
   SiPostgresql,
   SiHtml5,
+  SiPrisma,
 } from "react-icons/si";
 
 import { DiCss3 } from "react-icons/di";
@@ -40,8 +41,9 @@ export const Skills = () => {
     { name: "JavaScript", icon: <SiJavascript className="text-[#F7DF1E]" /> },
     { name: "Python", icon: <SiPython className="text-[#3776AB]" /> },
     { name: "C", icon: <SiC className="text-[#A8B9CC]" /> },
-    { name: "C++", icon: <SiCplusplus className="text-[#3178C6]" /> },
+    { name: "Socketdotio", icon: <SiSocketdotio  className="text-white" /> },
     { name: "MySQL", icon: <GrMysql className="text-[#4169E1]" /> },
+    { name: "PostgreSQL", icon: <SiPostgresql className="text-[#4169E1]" /> },
     { name: "HTML5", icon: <SiHtml5 className="text-[#E34F26]" /> },
     { name: "CSS3", icon: <DiCss3 className="text-[#1572B6]" /> },
   ];
@@ -58,10 +60,10 @@ export const Skills = () => {
     },
     { name: "Bootstrap", icon: <SiBootstrap className="text-purple-500" /> },
     { name: "Node.js", icon: <SiNodedotjs className="text-[#339933]" /> },
-    { name: "PostgreSQL", icon: <SiPostgresql className="text-[#4169E1]" /> },
     { name: "Express.js", icon: <SiExpress className="text-white" /> },
     { name: "Git", icon: <SiGit className="text-[#F05032]" /> },
     { name: "GitHub", icon: <SiGithub className="text-white" /> },
+    { name: "Prisma ", icon: <SiPrisma  className="text-cyan-400" /> },
   ];
 
   return (
