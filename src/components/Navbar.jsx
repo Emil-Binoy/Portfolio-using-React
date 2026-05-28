@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Scrollspy from "react-scrollspy";
-import my_cv from "../assets/my_cv.pdf";
+import cv from "../assets/cv.pdf";
 import HamburgerToggle from "./HamburgerToggle"; 
 
 export const Navbar = () => {
@@ -64,7 +64,7 @@ export const Navbar = () => {
           {/* Action Interactive Block (CV & Menu Toggle) */}
           <div className="flex items-center gap-3 z-10">
             <a
-              href={my_cv}
+              href={cv}
               download="Emil_Binoy_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
