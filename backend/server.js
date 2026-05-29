@@ -78,9 +78,10 @@ app.post('/api/chat', async (req, res) => {
       return res.status(400).json({ error: "No messages provided" });
     }
 
+    // This converts your custom array into a pure array Groq understands
     const formattedMessages = messages.map(m => ({
-      role: m.role === 'bot' ? 'assistant' : 'user',
-      content: m.content
+      role: m.role === 'bot' || m.role === 'assistant' ? 'assistant' : 'user',
+      content: String(m.content || '')
     }));
 
     const completion = await groq.chat.completions.create({
