@@ -96,7 +96,10 @@ app.post('/api/chat', async (req, res) => {
     res.json({ text: response.text });
   } catch (error) {
     console.error("AI Error:", error);
-    res.status(500).json({ error: "Something went wrong behind the scenes." });
+    res.status(500).json({
+      error: "Internal Server Error", 
+      text: "My backend encountered an unexpected hiccup while talking to Gemini."
+    });
   }
 });
 
