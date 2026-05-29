@@ -1,12 +1,12 @@
 import express from 'express';
 import cors from 'cors';
 import 'dotenv/config';
-import { GoogleGenAI } from '@google/genai';
+import Groq from "groq-sdk";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 app.use(cors()); 
 app.use(express.json()); 
@@ -39,18 +39,14 @@ Skills:
 Featured Projects:
 
 1. "Xeltrivox"
-
    * A modern real-time chat application built with React, Node.js, Express.js, PostgreSQL, Prisma, and Socket.IO.
    * Features instant messaging, authentication, and a clean modern UI.
 
 2. "Notes Taking App"
-
    * A full-stack notes management platform with authentication, CRUD operations, and secure data storage.
 
 3. "E-magine"
-
    * An AI-powered image generation platform utilizing Hugging Face APIs.
-
 
 Experience & Achievements:
 
@@ -72,7 +68,7 @@ Guidelines:
 * Use a touch of light developer humor when appropriate.
 * Be confident and professional.
 * If asked about unrelated topics, politely guide the conversation back to Emil's portfolio, projects, or technical journey.
-  `;
+`;
 
 app.post('/api/chat', async (req, res) => {
   try {
@@ -82,23 +78,26 @@ app.post('/api/chat', async (req, res) => {
       return res.status(400).json({ error: "No messages provided" });
     }
 
-    const userMessage = messages[messages.length - 1].content;
+    const formattedMessages = messages.map(m => ({
+      role: m.role === 'bot' ? 'assistant' : 'user',
+      content: m.content
+    }));
 
-    const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
-      contents: userMessage,
-      config: {
-        systemInstruction: SYSTEM_INSTRUCTION,
-        temperature: 0.7,
-      }
+    const completion = await groq.chat.completions.create({
+      messages: [
+        { role: "system", content: SYSTEM_INSTRUCTION },
+        ...formattedMessages
+      ],
+      model: "llama3-70b-8192",
+      temperature: 0.7,
     });
 
-    res.json({ text: response.text });
+    res.json({ text: completion.choices[0].message.content });
   } catch (error) {
     console.error("AI Error:", error);
     res.status(500).json({
       error: "Internal Server Error", 
-      text: "My backend encountered an unexpected hiccup while talking to Gemini."
+      text: "My backend encountered an unexpected hiccup while processing your message."
     });
   }
 });
