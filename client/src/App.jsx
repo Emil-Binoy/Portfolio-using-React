@@ -10,6 +10,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Cursor from "./components/Cursor";
 import { Skills } from "./components/sections/Skills";
+import ChatBot from "./components/ChatBot";
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
       <Skills/>
       <Projects/>
       <Contact/>
+      <ChatBot/>
       <Footer/>
     </div>
   );
