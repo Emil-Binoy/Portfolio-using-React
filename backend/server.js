@@ -89,7 +89,7 @@ app.post('/api/chat', async (req, res) => {
         { role: "system", content: SYSTEM_INSTRUCTION },
         ...formattedMessages
       ],
-      model: "llama3-70b-8192",
+      model: "llama-3.3-70b-versatile",
       temperature: 0.7,
     });
 
