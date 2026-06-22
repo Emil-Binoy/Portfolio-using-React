@@ -3,6 +3,7 @@ import career_bridge from '../../../assets/images/career_bridge.png';
 import data_looper from '../../../assets/images/data_looper.png';
 import notes_app from '../../../assets/images/Notes_app.png';
 import Xeltrivox from '../../../assets/images/Xeltrivox.png';
+import fetchly from '../../../assets/images/fetchly.png';
 
 export const projectData = [
   {
@@ -14,12 +15,12 @@ export const projectData = [
     image: career_bridge
   },
   {
-    title: "E - magine",
-    description: "AI image generation platform bridging human creativity and Hugging Face API.",
-    tech: ["React JS", "Hugging Face", "Tailwind"],
-    link: "https://e-magine.vercel.app/",
-    github: "https://github.com/Emil-Binoy/E-magine",
-    image: "https://media.licdn.com/dms/image/v2/D4E12AQGsv8jA_pHx5w/article-cover_image-shrink_720_1280/B4EZXwWdEFHcAI-/0/1743494175942?e=2147483647&v=beta&t=bl-zudlX2o3xa9Gkb3WBHrTN-7tWXtx_FGEBRj5WK1c"
+    title: "fetchly",
+    description: "A full-stack web application that simplifies downloading media from popular socialplatforms.",
+    tech: ["React JS", "Express.js", "Tailwind", "yt-dlp"],
+    link: "https://media-downloader-xi.vercel.app/",
+    github: "https://github.com/Emil-Binoy/media-downloader",
+    image: fetchly
   },
   {
     title: "Certificate Gallery",
