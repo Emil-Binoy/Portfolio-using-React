@@ -15,8 +15,8 @@ export const projectData = [
     image: career_bridge
   },
   {
-    title: "fetchly",
-    description: "A full-stack web application that simplifies downloading media from popular socialplatforms.",
+    title: "Fetchly",
+    description: "A modern downloader for seamless media downloads across platforms.",
     tech: ["React JS", "Express.js", "Tailwind", "yt-dlp"],
     link: "https://media-downloader-xi.vercel.app/",
     github: "https://github.com/Emil-Binoy/media-downloader",
