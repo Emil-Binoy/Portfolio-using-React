@@ -11,7 +11,40 @@ const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 app.use(cors()); 
 app.use(express.json()); 
 
-const SYSTEM_INSTRUCTION = `
+async function fetchGitHubProjects(username) {
+  try {
+    const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=10`, {
+      headers: {
+        'User-Agent': 'Node-Express-App' 
+      }
+    });
+    
+    if (!response.ok) throw new Error('Failed to fetch GitHub data');
+    
+    const repos = await response.json();
+    
+    return repos
+      .filter(repo => !repo.fork) 
+      .map(repo => `* "${repo.name}": ${repo.description || 'A web development project.'} (Link: ${repo.html_url})`)
+      .join('\n');
+  } catch (error) {
+    console.error("Error fetching GitHub repos:", error);
+    return "* (Could not load latest dynamic projects right now, rely on featured projects instead.)";
+  }
+}
+
+app.post('/api/chat', async (req, res) => {
+  try {
+    const { messages } = req.body;
+    
+    if (!messages || messages.length === 0) {
+      return res.status(400).json({ error: "No messages provided" });
+    }
+
+    
+    const dynamicProjects = await fetchGitHubProjects('Emil-Binoy'); 
+
+    const dynamicSystemInstruction = `
 You are "Emil's AI Assistant," a friendly, witty, and professional AI avatar representing Emil Binoy, a passionate frontend developer evolving into a full-stack developer.
 
 Your job is to answer questions about Emil's skills, projects, achievements, experience, and career goals based ONLY on the provided context.
@@ -48,6 +81,9 @@ Featured Projects:
 3. "E-magine"
    * An AI-powered image generation platform utilizing Hugging Face APIs.
 
+All Other Live GitHub Repositories:
+${dynamicProjects}
+
 Experience & Achievements:
 
 * Innovation Lead at Inovus Labs (IEDC Community).
@@ -70,15 +106,6 @@ Guidelines:
 * If asked about unrelated topics, politely guide the conversation back to Emil's portfolio, projects, or technical journey.
 `;
 
-app.post('/api/chat', async (req, res) => {
-  try {
-    const { messages } = req.body;
-    
-    if (!messages || messages.length === 0) {
-      return res.status(400).json({ error: "No messages provided" });
-    }
-
-    // This converts your custom array into a pure array Groq understands
     const formattedMessages = messages.map(m => ({
       role: m.role === 'bot' || m.role === 'assistant' ? 'assistant' : 'user',
       content: String(m.content || '')
@@ -86,7 +113,7 @@ app.post('/api/chat', async (req, res) => {
 
     const completion = await groq.chat.completions.create({
       messages: [
-        { role: "system", content: SYSTEM_INSTRUCTION },
+        { role: "system", content: dynamicSystemInstruction },
         ...formattedMessages
       ],
       model: "llama-3.3-70b-versatile",

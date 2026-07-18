@@ -1,9 +1,9 @@
 import certImg from '../../../assets/images/Certificate_gallery.png';
 import career_bridge from '../../../assets/images/career_bridge.png';
-import data_looper from '../../../assets/images/data_looper.png';
 import notes_app from '../../../assets/images/Notes_app.png';
 import Xeltrivox from '../../../assets/images/Xeltrivox.png';
 import fetchly from '../../../assets/images/fetchly.png';
+import predicta from '../../../assets/images/predicta_26.png';
 
 export const projectData = [
   {
@@ -31,12 +31,12 @@ export const projectData = [
     image: certImg
   },
   {
-    title: "Data Looper",
-    description: "A well-structured tool for generating repeated text in a clean and efficient way.",
-    tech: ["React JS", "Tailwind"],
-    link: "https://data-looper.vercel.app/",
-    github: "https://github.com/Emil-Binoy/data-looper",
-    image: data_looper
+    title: "predicta 26",
+    description: "A college FIFA prediction competition platform featuring live insights and secure predictions.",
+    tech: ["React JS","Node.js","Express.js","MongoDB", "Tailwind"],
+    link: "https://predicta-26.vercel.app/",
+    github: "https://github.com/Emil-Binoy/predicta-26",
+    image: predicta
   },
   {
     title: "Notes App",

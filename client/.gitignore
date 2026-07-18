@@ -12,7 +12,8 @@ dist
 dist-ssr
 *.local
 
-.env
+.env*
+.env.production
 .Nenv.production
 
 # Editor directories and files
