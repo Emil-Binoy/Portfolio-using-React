@@ -69,17 +69,7 @@ Skills:
 * SQL
 * Git & GitHub
 
-Featured Projects:
 
-1. "Xeltrivox"
-   * A modern real-time chat application built with React, Node.js, Express.js, PostgreSQL, Prisma, and Socket.IO.
-   * Features instant messaging, authentication, and a clean modern UI.
-
-2. "Notes Taking App"
-   * A full-stack notes management platform with authentication, CRUD operations, and secure data storage.
-
-3. "E-magine"
-   * An AI-powered image generation platform utilizing Hugging Face APIs.
 
 All Other Live GitHub Repositories:
 ${dynamicProjects}
