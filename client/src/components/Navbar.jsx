@@ -65,13 +65,13 @@ export const Navbar = () => {
           <div className="flex items-center gap-3 z-10">
             <a
               href={cv}
-              download="Emil_Binoy_CV.pdf"
+              download="Emil_Binoy_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center px-4 py-1.5 md:px-5 md:py-2 text-xs md:text-sm font-semibold text-blue-400 transition-all duration-300 border border-blue-500 rounded-full hover:bg-blue-600 hover:text-white shadow-[0_0_10px_rgba(59,130,246,0.1)] hover:shadow-[0_0_15px_rgba(59,130,246,0.3)]"
             >
-              <span className="md:hidden">CV</span>
-              <span className="hidden md:block">Download CV</span>
+              <span className="md:hidden">Resume</span>
+              <span className="hidden md:block">Download Resume</span>
             </a>
 
             <div className="md:hidden flex items-center">
