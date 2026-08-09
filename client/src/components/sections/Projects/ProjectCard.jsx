@@ -2,8 +2,26 @@ import React from 'react';
 import { FaExternalLinkAlt, FaGithub, FaCode } from "react-icons/fa";
 
 const ProjectCard = ({ project }) => {
+  const openProject = () => {
+    window.open(project.link, '_blank', 'noopener,noreferrer');
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openProject();
+    }
+  };
+
   return (
-    <div className="relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur-xl transition-all duration-500 group-hover:border-blue-500/50">
+    <div
+      className="relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur-xl transition-all duration-500 group-hover:border-blue-500/50 cursor-pointer"
+      role="link"
+      tabIndex={0}
+      aria-label={`Open ${project.title}`}
+      onClick={openProject}
+      onKeyDown={handleKeyDown}
+    >
       <div className="relative h-56 overflow-hidden">
         <img 
           src={project.image} 
@@ -13,10 +31,10 @@ const ProjectCard = ({ project }) => {
         <div className="absolute inset-0 bg-gradient-to-t from-[#030014] to-transparent opacity-60"></div>
         
         <div className="absolute top-4 right-4 flex gap-2">
-          <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-3 bg-black/40 backdrop-blur-md rounded-full text-white hover:bg-blue-600 transition-colors">
+          <a href={project.github} target="_blank" rel="noopener noreferrer" onClick={(event) => event.stopPropagation()} className="p-3 bg-black/40 backdrop-blur-md rounded-full text-white hover:bg-blue-600 transition-colors">
             <FaGithub size={18} />
           </a>
-          <a href={project.link} target="_blank" rel="noopener noreferrer" className="p-3 bg-black/40 backdrop-blur-md rounded-full text-white hover:bg-blue-600 transition-colors">
+          <a href={project.link} target="_blank" rel="noopener noreferrer" onClick={(event) => event.stopPropagation()} className="p-3 bg-black/40 backdrop-blur-md rounded-full text-white hover:bg-blue-600 transition-colors">
             <FaExternalLinkAlt size={18} />
           </a>
         </div>
