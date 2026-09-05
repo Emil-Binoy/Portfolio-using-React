@@ -106,11 +106,20 @@ Guidelines:
         { role: "system", content: dynamicSystemInstruction },
         ...formattedMessages
       ],
-      model: "llama-3.3-70b-versatile",
+      model: "openai/gpt-oss-20b",
       temperature: 0.7,
+      max_tokens: 300,
     });
 
-    res.json({ text: completion.choices[0].message.content });
+    const choice = completion.choices[0].message;
+    // Use reasoning_content separation if Groq provides it, otherwise strip <think> blocks
+    let cleanContent = choice.content || '';
+    // Remove complete <think>...</think> blocks
+    cleanContent = cleanContent.replace(/<think>[\s\S]*?<\/think>/g, '');
+    // Remove any incomplete/truncated <think> block (no closing tag)
+    cleanContent = cleanContent.replace(/<think>[\s\S]*/g, '');
+    cleanContent = cleanContent.trim();
+    res.json({ text: cleanContent });
   } catch (error) {
     console.error("AI Error:", error);
     res.status(500).json({
