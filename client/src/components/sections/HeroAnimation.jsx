@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import profile from '../../assets/images/profile.jpg';
+import profile from '../../assets/images/Profile.jpg';
 import Tilt from "react-parallax-tilt";
 
 import { 
